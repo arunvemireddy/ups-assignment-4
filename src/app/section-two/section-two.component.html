@@ -3,16 +3,16 @@
     <form (submit)="validateForm($event)">
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ1Correct ? '#E4FFE1' : '#FFD0D0') : ''}" class="questionOne">
         <p>{{q1}}</p>
-
+        <br/>
         <input type="radio" id="q1-yes" name="q1" value="a" [(ngModel)]="selectedQ1">
         <label for="q1-yes">Solely focus on the functionality of the program and assume security concerns will be addressed by dedicated security teams during testing.</label><br/>
-
+ 
         <input type="radio" id="q1-no" name="q1" value="b" [(ngModel)]="selectedQ1">
         <label for="q1-no">Prioritize functionality but be aware of potential security issues, leaving it to testing and security teams to handle.</label><br/>
-
+        
         <input type="radio" id="q1-not-sure" name="q1" value="c" [(ngModel)]="selectedQ1">
         <label for="q1-not-sure">Actively address and mitigate security concerns, including using safer alternatives to functions like strcpy, as part of the development process. </label><br/>
-        
+       
         <input type="radio" id="q1-not-sure" name="q1" value="d" [(ngModel)]="selectedQ1">
         <label for="q1-not-sure">Only address security concerns if explicitly instructed by security teams or if security is a primary requirement for the specific project. </label><br/>
  
@@ -22,7 +22,7 @@
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ2Correct ? '#E4FFE1' : '#FFD0D0') : ''}" class="questionTwo">
         <p>{{q2}}</p>
 
-
+        <br/>
         <input type="radio" id="q2-a" name="q2" value="a" [(ngModel)]="selectedQ2">
         <label for="q2-a">Full Trust: Developers assume widely-used library APIs are inherently secure. </label><br/>
 
@@ -44,6 +44,7 @@
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ3Correct ? '#E4FFE1' : '#FFD0D0') : ''}" class="questionThree">
         <p>{{q3}}</p>
 
+        <br/>
         <input type="radio" id="q3-a" name="q3" value="a" [(ngModel)]="selectedQ3">
         <label for="q3-a">Once a system is functional, updates should be avoided to prevent potential disruptions, even if there are known vulnerabilities in older functions and APIs. </label><br />
 
