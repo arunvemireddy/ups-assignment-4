@@ -47,3 +47,9 @@ form {
     cursor: pointer;
     float: right;
   }
+
+  .disabled-button {
+    background-color: #CCCCCC; /* Set the background color for the disabled state */
+    color: #666666; /* Set the text color for the disabled state */
+    cursor: not-allowed; /* Change the cursor to indicate the button is not clickable */
+  }

@@ -1,6 +1,8 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-section-one',
@@ -10,7 +12,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './section-one.component.scss'
 })
 export class SectionOneComponent {
-  constructor(private e1:ElementRef,private renderer:Renderer2) {}
+  constructor(private e1:ElementRef,private renderer:Renderer2, private router:Router) {}
   q1 = `1. Do you think application security is considered one of the developer's responsibilities in SDLC? `;
   q2 = `2. At which stages in the Software Development Life Cycle (SDLC) should security measures be applied?`;
   q3 = `3. Which of the following are True?`;
@@ -79,13 +81,5 @@ export class SectionOneComponent {
     if (!this.isQ5Correct) {
       console.log('Guidelines for Q5:', this.guideLinesQ5);
     }
-
-    
-    
-
-
-
-
-
   }
 }

@@ -22,6 +22,7 @@
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ2Correct ? '#E4FFE1' : '#FFD0D0') : ''}" class="questionTwo">
         <p>{{q2}}</p>
 
+
         <input type="radio" id="q2-a" name="q2" value="a" [(ngModel)]="selectedQ2">
         <label for="q2-a">Full Trust: Developers assume widely-used library APIs are inherently secure. </label><br/>
 
@@ -36,7 +37,6 @@
 
         <input type="radio" id="q2-e" name="q2" value="e" [(ngModel)]="selectedQ2">
         <label for="q2-e">No Trust: Developers never assume that library APIs are secure; they rigorously assess and validate security aspects before integration. </label><br/>
-
         <br>
         </div>
 
@@ -83,7 +83,10 @@
         <label for="q5-depends">Depends on the context</label>
         <br><br />
         </div> -->
-        <button type="submit">Next</button>
+        <button type="submit" [ngStyle]="{'background-color': !isAllAnswersCorrect ? '#F1EFEF' : '#007bff',
+        'color': !isAllAnswersCorrect ? 'grey' : 'white'
+        }"
+        >Submit</button>
     </form>
 
 
@@ -105,4 +108,9 @@
             <li>{{ guideLinesQ5 }}</li>
         </ul>
     </div>
+</div>
+
+
+<div>
+    <ng-content  *ngIf="!isAllAnswersCorrect"></ng-content>
 </div>

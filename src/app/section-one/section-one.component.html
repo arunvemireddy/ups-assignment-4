@@ -79,9 +79,11 @@
         <label for="q5-depends">Depends on the context</label>
         <br/>
         </div>
-        <button type="submit">Next</button>
+        <button type="submit" [ngStyle]="{'background-color': !isAllAnswersCorrect ? '#F1EFEF' : '#007bff',
+        'color': !isAllAnswersCorrect ? 'grey' : 'white'
+        }"
+        >Submit</button>
     </form>
-
 
     <div  *ngIf="!isAllAnswersCorrect">
         <h5>Guidelines for Incorrect Answers</h5>
@@ -101,4 +103,8 @@
             <li>{{ guideLinesQ5 }}</li>
         </ul>
     </div>
+</div>
+
+<div>
+    <ng-content *ngIf="!isAllAnswersCorrect"></ng-content>
 </div>

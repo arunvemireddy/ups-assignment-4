@@ -1,19 +1,33 @@
-<!-- <div>
-  <h3>Usable Privacy and Security</h3>
-</div> -->
-
 <div class="sections" style="display: flex;">
   <button (click)="showSection('section1')" [style.background-color]="currentSection === 'section1' ? '#CCD8DF' : '#EBEBEB'">Section 1</button><br>
   <button (click)="showSection('section2')" [style.background-color]="currentSection === 'section2' ? '#CCD8DF' : '#EBEBEB'">Section 2</button><br>
   <button (click)="showSection('section3')" [style.background-color]="currentSection === 'section3' ? '#CCD8DF' : '#EBEBEB'">Section 3</button><br>
-  <button (click)="showSection('section4')" [style.background-color]="currentSection === 'section4' ? '#CCD8DF' : '#EBEBEB'">Section 4</button><br>
+  <button (click)="showSection('section4')" [style.background-color]="currentSection === 'section4' ? '#CCD8DF' : '#EBEBEB'">Results</button><br>
 </div>
 
 
 <div class="main-div">
-  <app-section-one *ngIf="currentSection === 'section1'"></app-section-one>
-  <app-section-two *ngIf="currentSection === 'section2'"></app-section-two>
-  <app-section-three *ngIf="currentSection === 'section3'"></app-section-three>
+  <app-section-one *ngIf="currentSection === 'section1'">
+    <div>
+      <button  type="submit" (click)="showSection('section2')">Next >></button>
+  </div>
+  </app-section-one>
+
+  <app-section-two *ngIf="currentSection === 'section2'">
+    <div>
+      <button  type="submit" (click)="showSection('section3')">Next >></button>
+  </div>
+  </app-section-two>
+  <app-section-three *ngIf="currentSection === 'section3'">
+    <div>
+      <button  type="submit" (click)="showSection('section4')">Next >></button>
+  </div>
+  </app-section-three>
+  <app-result *ngIf="currentSection === 'section4'">
+    <div>
+      <button  type="submit" (click)="showSection('section4')">Next >></button>
+  </div>
+  </app-result>
 </div>
 
 <router-outlet></router-outlet>

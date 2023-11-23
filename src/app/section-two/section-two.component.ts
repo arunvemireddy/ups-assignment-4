@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-section-two',
@@ -10,6 +11,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './section-two.component.scss'
 })
 export class SectionTwoComponent {
+
+  constructor(private router:Router){}
+
   q1 = `1. When developing software, security vulnerabilities such as buffer overflow and memory leaks can pose significant risks. 
   Consider the strcpy function in the C programming language, which is known for its potential to cause buffer overflows. As a software developer, should you`;
   q2 = `2. To what extent do developers trust the security of library APIs during development?`;
