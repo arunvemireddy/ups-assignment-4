@@ -105,6 +105,6 @@ export class SectionTwoComponent {
     }
     
     this.section2Score = this.sharedService.section2Score;
-    this.section2Guidelines = this.sharedService.section1Guidelines;
+    this.section2Guidelines = this.sharedService.section2Guidelines;
   }
 }
