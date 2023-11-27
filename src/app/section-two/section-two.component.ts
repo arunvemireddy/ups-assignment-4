@@ -38,7 +38,15 @@ export class SectionTwoComponent {
     q3: 10,
     q4: 10,
     q5: 10,
-  }
+  };
+
+  result = {
+    q1: 0,
+    q2: 0,
+    q3: 0,
+    q4: 0,
+    q5: 0
+  };
 
   guideLines = {
     q1: 'yes1',
@@ -76,30 +84,35 @@ export class SectionTwoComponent {
 
     if (this.isQ1Correct) {
       this.sharedService.section2Score += this.score.q1;
+      this.result.q1 = this.score.q1;
     } else {
       this.sharedService.section2Guidelines.push(this.guideLines.q1);
     }
 
     if (this.isQ2Correct) {
       this.sharedService.section2Score += this.score.q2;
+      this.result.q2 = this.score.q2;
     } else {
       this.sharedService.section2Guidelines.push(this.guideLines.q2);
     }
 
     if (this.isQ3Correct) {
       this.sharedService.section2Score += this.score.q3;
+      this.result.q3 = this.score.q3;
     } else {
       this.sharedService.section2Guidelines.push(this.guideLines.q3);
     }
 
     if (this.isQ4Correct) {
       this.sharedService.section2Score += this.score.q4;
+      this.result.q4 = this.score.q4;
     } else {
       this.sharedService.section2Guidelines.push(this.guideLines.q4);
     }
 
     if (this.isQ5Correct) {
       this.sharedService.section2Score += this.score.q5;
+      this.result.q5 = this.score.q5;
     } else {
       this.sharedService.section2Guidelines.push(this.guideLines.q5);
     }

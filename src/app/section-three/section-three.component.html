@@ -11,8 +11,11 @@
                 <div class="custom-col" style="width: 5%;">
                     <label>1</label>
                 </div>
-                <div class="col-sm-11" style="width: 95%;">
+                <div class="col-sm-11" style="width: 90%;">
                     <label for="q1">{{q1}}</label>
+                </div>
+                <div class="custom-col" style="width: 5%;">
+                    <label>{{result.q1}}/{{score.q1}}</label>
                 </div>
             </div>
 
@@ -54,8 +57,11 @@
                 <div class="custom-col" style="width: 5%;">
                     <label>2</label>
                 </div>
-                <div class="col-sm-11" style="width: 95%;">
+                <div class="col-sm-11" style="width: 90%;">
                     <label for="q2">{{q2}}</label>
+                </div>
+                <div class="custom-col" style="width: 5%;">
+                    <label>{{result.q2}}/{{score.q2}}</label>
                 </div>
             </div>
 
@@ -123,8 +129,11 @@
                 <div class="custom-col" style="width: 5%;">
                     <label>3</label>
                 </div>
-                <div class="col-sm-11" style="width: 95%;">
+                <div class="col-sm-11" style="width: 90%;">
                     <label for="q3">{{q3}}</label>
+                </div>
+                <div class="custom-col" style="width: 5%;">
+                    <label>{{result.q3}}/{{score.q3}}</label>
                 </div>
             </div>
 
@@ -154,8 +163,8 @@
                     <label for="q3-c">Security is a priority during developer testing</label>
                 </div>
             </div>
-            <br>
         </div>
+        <br>
 
         <!-- Q4 -->
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ4Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
@@ -165,8 +174,11 @@
                 <div class="custom-col" style="width: 5%;">
                     <label>4</label>
                 </div>
-                <div class="col-sm-11" style="width: 95%;">
+                <div class="col-sm-11" style="width: 90%;">
                     <label for="q4">{{q4}}</label>
+                </div>
+                <div class="custom-col" style="width: 5%;">
+                    <label>{{result.q4}}/{{score.q4}}</label>
                 </div>
             </div>
 
@@ -197,9 +209,8 @@
                     <label for="q4-unsure">Not sure</label><br />
                 </div>
             </div>
-
-            <br>
         </div>
+        <br/>
 
         <!-- q5 -->
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ5Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
@@ -209,8 +220,11 @@
                 <div class="custom-col" style="width: 5%;">
                     <label>5</label>
                 </div>
-                <div class="col-sm-11" style="width: 95%;">
+                <div class="col-sm-11" style="width: 90%;">
                     <label for="q5">{{q5}}</label>
+                </div>
+                <div class="custom-col" style="width: 5%;">
+                    <label>{{result.q5}}/{{score.q5}}</label>
                 </div>
             </div>
 
@@ -240,10 +254,8 @@
                     <label for="q5-depends">Depends on the context</label>
                 </div>
             </div>
-
-
-            <br />
         </div>
+        <br/>
         <button type="submit" class="btn btn-primary" [class.disabled]="isButtonDisabled">Submit</button>
     </form>
 
