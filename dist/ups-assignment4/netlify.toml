@@ -1,0 +1,3 @@
+[build]
+  command = "ng build"
+  publish = "dist/ups-assignment4"
