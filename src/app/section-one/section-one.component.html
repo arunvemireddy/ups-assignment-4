@@ -254,7 +254,7 @@
                 </div>
             </div>
         </div>
-        <br/>
+        <br />
         <button class="btn btn-primary" type="submit" [class.disabled]="isButtonDisabled">Submit</button>
     </form>
 
@@ -262,9 +262,13 @@
         <h5>Your Score: {{section1Score}}</h5>
 
         <h5>Guidelines for Incorrect Answers</h5>
-        <ul *ngFor="let guideline of section1Guidelines">
-            <li>{{ guideline }}</li>
-        </ul>
+        <div *ngFor="let guideline of section1Guidelines">
+            <div class="guideDiv">
+                <strong>{{ guideline.split('\t')[0] }}</strong>
+                <br />
+                <span class="guideline">{{ guideline.split('\t')[1] }}</span>
+            </div>
+        </div>
     </div>
 </div>
 

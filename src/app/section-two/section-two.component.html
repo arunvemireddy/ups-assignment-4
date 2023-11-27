@@ -28,7 +28,7 @@
                     <input type="radio" id="q1-solely" name="q1" value="a" [(ngModel)]="selectedQ1">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-solely">Solely focus on the functionality of the program and assume security concerns
+                    <label for="q1-solely">A) Solely focus on the functionality of the program and assume security concerns
                         will be addressed by dedicated security teams during testing.</label>
                 </div>
             </div>
@@ -38,9 +38,8 @@
                     <input type="radio" id="q1-prior" name="q1" value="b" [(ngModel)]="selectedQ1">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-prior">Prioritize functionality but be aware of potential security issues, leaving it
-                        to
-                        testing and security teams to handle.</label><br />
+                    <label for="q1-prior">B) Prioritize functionality but be aware of potential security issues, leaving it
+                        to testing and security teams to handle.</label><br />
                 </div>
             </div>
 
@@ -49,7 +48,7 @@
                     <input type="radio" id="q1-active" name="q1" value="c" [(ngModel)]="selectedQ1">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-active">Actively address and mitigate security concerns, including using safer
+                    <label for="q1-active">C) Actively address and mitigate security concerns, including using safer
                         alternatives to functions like strcpy, as part of the development process. </label><br />
                 </div>
             </div>
@@ -59,7 +58,7 @@
                     <input type="radio" id="q1-only" name="q1" value="d" [(ngModel)]="selectedQ1">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-only">Only address security concerns if explicitly instructed by security teams
+                    <label for="q1-only">D) Only address security concerns if explicitly instructed by security teams
                         or if security is a primary requirement for the specific project. </label><br />
                 </div>
             </div>
@@ -88,7 +87,7 @@
                     <input type="radio" id="q2-a" name="q2" value="a" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-a">Full Trust: Developers assume widely-used library APIs are inherently secure.
+                    <label for="q2-a">A) Full Trust: Developers assume widely-used library APIs are inherently secure.
                     </label>
                 </div>
             </div>
@@ -98,9 +97,8 @@
                     <input type="radio" id="q2-b" name="q2" value="b" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-b">Trust with Awareness: Developers generally trust library APIs but are mindful of
-                        potential
-                        security issues. </label>
+                    <label for="q2-b">B) Trust with Awareness: Developers generally trust library APIs but are mindful of
+                        potential security issues. </label>
                 </div>
             </div>
 
@@ -109,7 +107,7 @@
                     <input type="radio" id="q2-c" name="q2" value="c" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-c">Neutral Stance: Developers approach library APIs without a specific bias,
+                    <label for="q2-c">C) Neutral Stance: Developers approach library APIs without a specific bias,
                         considering both
                         functionality and security equally. </label>
                 </div>
@@ -120,9 +118,8 @@
                     <input type="radio" id="q2-d" name="q2" value="d" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-d">Skeptical Trust: Developers are wary of the security of library APIs and actively
-                        assess
-                        their implications. </label><br />
+                    <label for="q2-d">D) Skeptical Trust: Developers are wary of the security of library APIs and actively
+                        assess their implications. </label><br />
                 </div>
             </div>
 
@@ -131,7 +128,7 @@
                     <input type="radio" id="q2-e" name="q2" value="e" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-e">No Trust: Developers never assume that library APIs are secure; they rigorously
+                    <label for="q2-e">E) No Trust: Developers never assume that library APIs are secure; they rigorously
                         assess and validate security aspects before integration. </label><br />
                 </div>
             </div>
@@ -160,7 +157,7 @@
                     <input type="radio" id="q3-a" name="q3" value="a" [(ngModel)]="selectedQ3">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q3-a">Once a system is functional, updates should be avoided to prevent potential
+                    <label for="q3-a">A) Once a system is functional, updates should be avoided to prevent potential
                         disruptions, even if there are known vulnerabilities in older functions and APIs. </label>
                 </div>
             </div>
@@ -170,8 +167,8 @@
                     <input type="radio" id="q3-b" name="q3" value="b" [(ngModel)]="selectedQ3">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q3-b">Developers should prioritize stability and only consider updates when absolutely
-                        necessary, balancing the risk of potential vulnerabilities with the need for stability. </label>
+                    <label for="q3-b">B) Developers should prioritize stability and consider updates when necessary, 
+                        giving weight to potential vulnerabilities and the need for stability</label>
                 </div>
             </div>
 
@@ -180,7 +177,7 @@
                     <input type="radio" id="q3-c" name="q3" value="c" [(ngModel)]="selectedQ3">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q3-c">Developers should always prioritize security over stability; they should regularly
+                    <label for="q3-c">C) Developers should always prioritize security over stability; they should regularly
                         update code, libraries, and use the latest functions to address known vulnerabilities and
                         enhance the overall security posture.</label>
                 </div>
@@ -194,9 +191,13 @@
     <div *ngIf="!isAllAnswersCorrect">
         <h5>Your Score: {{section2Score}}</h5>
         <h5>Guidelines for Incorrect Answers</h5>
-        <ul *ngFor="let guideline of section2Guidelines">
-            <li>{{ guideline }}</li>
-        </ul>
+        <div *ngFor="let guideline of section2Guidelines">
+            <div class="guideDiv">
+                <strong>{{ guideline.split('\t')[0] }}</strong>
+                <br />
+                <span class="guideline">{{ guideline.split('\t')[1] }}</span>
+            </div>
+        </div>
     </div>
 </div>
 

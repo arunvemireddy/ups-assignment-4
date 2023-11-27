@@ -10,7 +10,7 @@ import { ResultComponent } from './result/result.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,SectionOneComponent,SectionTwoComponent,SectionThreeComponent,ResultComponent],
+  imports: [CommonModule, RouterOutlet, SectionOneComponent, SectionTwoComponent, SectionThreeComponent, ResultComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

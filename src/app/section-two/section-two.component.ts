@@ -27,8 +27,8 @@ export class SectionTwoComponent {
   q5 = `5. Is it appropriate for developers to address security concerns solely in response to a security incident?`;
 
   correctAnsQ1 = 'c';
-  correctAnsQ2 = 'd';
-  correctAnsQ3 = 'c';
+  correctAnsQ2 = 'e';
+  correctAnsQ3 = 'b';
   correctAnsQ4 = 'no';
   correctAnsQ5 = 'no';
 
@@ -49,9 +49,19 @@ export class SectionTwoComponent {
   };
 
   guideLines = {
-    q1: 'yes1',
-    q2: 'yes2',
-    q3: 'yes',
+    q1: `Correct Answer: C \t  Although functionality is important, security vulnerabilities like buffer overflows and memory leaks can pose significant risks. 
+    It's crucial for developers to actively address and mitigate security concerns during the development process, including using safer alternatives to functions like strcpy. 
+    Relying solely on dedicated security teams during testing may increase the likelihood of overlooking critical vulnerabilities. `,
+
+    q2: `Correct Answer: E \t Trusting library APIs is common, it's essential to adopt a cautious approach to ensure the security of your software. 
+    Developers often rigorously assess and validate the security aspects of library APIs before integrating them into their projects. 
+    This proactive stance helps identify and address potential vulnerabilities. 
+    It's advisable to be vigilant about the security of the libraries you use to enhance the overall security of your application.`,
+
+    q3: `Correct Answer: B \t While stability is important, it's also crucial to recognize the significance of security in software development. 
+    Prioritizing stability should go hand in hand with considering updates, especially those addressing known vulnerabilities. 
+    Balancing these factors ensures your software remains stable while also being resilient against potential security threats.`,
+
     q4: 'yes',
     q5: 'yes5'
   }
@@ -107,16 +117,16 @@ export class SectionTwoComponent {
       this.sharedService.section2Score += this.score.q4;
       this.result.q4 = this.score.q4;
     } else {
-      this.sharedService.section2Guidelines.push(this.guideLines.q4);
+      // this.sharedService.section2Guidelines.push(this.guideLines.q4);
     }
 
     if (this.isQ5Correct) {
       this.sharedService.section2Score += this.score.q5;
       this.result.q5 = this.score.q5;
     } else {
-      this.sharedService.section2Guidelines.push(this.guideLines.q5);
+      // this.sharedService.section2Guidelines.push(this.guideLines.q5);
     }
-    
+
     this.section2Score = this.sharedService.section2Score;
     this.section2Guidelines = this.sharedService.section2Guidelines;
   }
