@@ -8,6 +8,12 @@
             <div>
                 <strong>Section 1 Score:{{sectionOneScore}}</strong>
             </div>
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" [style.width.%]="sectionOneScore * 2" [attr.aria-valuenow]="sectionOneScore" aria-valuemin="0" aria-valuemax="50">{{sectionOneScore * 2}}%</div>
+            </div>
+
+
             <div *ngFor="let guideline of section1Guidelines">
                 <div class="guideDiv">
                     <strong>{{ guideline.split('\t')[0] }}</strong>
@@ -21,6 +27,12 @@
             <div>
                 <strong>Section 2 Score:{{sectionTwoScore}}</strong>
             </div>
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" [style.width.%]="sectionTwoScore * 3.333" [attr.aria-valuenow]="sectionTwoScore" aria-valuemin="0" aria-valuemax="30">{{sectionTwoScore * 3.333}}%</div>
+            </div>
+
+
             <div *ngFor="let guideline of section2Guidelines">
                 <div class="guideDiv">
                     <strong>{{ guideline.split('\t')[0] }}</strong>
@@ -34,18 +46,24 @@
             <div>
                 <h5>Section 3 Score:{{sectionThreeScore}}</h5>
             </div>
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" [style.width.%]="sectionThreeScore * 3.333" [attr.aria-valuenow]="sectionThreeScore" aria-valuemin="0" aria-valuemax="30">{{sectionThreeScore * 3.333}}%</div>
+            </div>
+
             <div>
                 <ul *ngFor="let guideline of section3Guidelines">
                     <li>{{ guideline }}</li>
                 </ul>
             </div>
         </div>
-
     </div>
+
 
     <div class="row finalSection">
         <div class="col-12">
             <h5>Final Score:{{finalScore}}</h5>
         </div>
     </div>
+
 </div>
