@@ -30,9 +30,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+             
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {

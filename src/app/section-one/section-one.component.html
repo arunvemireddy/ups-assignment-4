@@ -1,106 +1,254 @@
-<h4>Section 1 - Security Questions</h4>
+<div class="heading">
+    <h4>Section 1 - Security Questions for Software Developers</h4>
+</div>
 <div>
     <form (submit)="validateForm($event)">
-        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ1Correct ? '#E4FFE1' : '#FFD0D0') : ''}" class="questionOne">
-        <p>{{q1}}</p>
+        <!-- Q1 -->
+        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ1Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
+            class="questionOne">
+            <div class="row question">
+                <div class="custom-col" style="width: 5%;">
+                    <label>1</label>
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q1">{{q1}}</label>
+                </div>
+            </div>
 
-        <input type="radio" id="q1-yes" name="q1" value="yes" [(ngModel)]="selectedQ1">
-        <label for="q1-yes">Yes</label><br />
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q1-a" name="q1" value="a" [(ngModel)]="selectedQ1">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q1-a">Yes</label><br />
+                </div>
+            </div>
 
-        <input type="radio" id="q1-no" name="q1" value="no" [(ngModel)]="selectedQ1">
-        <label for="q1-no">No</label><br />
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q1-b" name="q1" value="b" [(ngModel)]="selectedQ1">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q1-b">No</label><br />
+                </div>
+            </div>
 
-        <input type="radio" id="q1-not-sure" name="q1" value="not-sure" [(ngModel)]="selectedQ1">
-        <label for="q1-not-sure">Not Sure</label><br />
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q1-c" name="q1" value="c" [(ngModel)]="selectedQ1">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q1-c">Not Sure</label><br />
+                </div>
+            </div>
+        </div>
+        <br />
+
+
+        <!-- Q2 -->
+        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ2Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
+            class="questionTwo">
+
+            <div class="row question">
+                <div class="custom-col" style="width: 5%;">
+                    <label>2</label>
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q2">{{q2}}</label>
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q2-a" name="q2" value="a" [(ngModel)]="selectedQ2">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q2-a">During Design and Implementation</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q2-b" name="q2" value="b" [(ngModel)]="selectedQ2">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q2-b">In Developer Testing</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q2-c" name="q2" value="c" [(ngModel)]="selectedQ2">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q2-c">Through Code Testing and Code Review</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q2-d" name="q2" value="d" [(ngModel)]="selectedQ2">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q2-d">In Post-development Testing</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q2-e" name="q2" value="e" [(ngModel)]="selectedQ2">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q2-e">All of the Above</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q2-f" name="q2" value="f" [(ngModel)]="selectedQ2">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q2-f">None of the Above</label>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <!-- Q3 -->
+        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ3Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
+            class="questionThree">
+
+            <div class="row question">
+                <div class="custom-col" style="width: 5%;">
+                    <label>3</label>
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q3">{{q3}}</label>
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q3-a" name="q3" value="a" [(ngModel)]="selectedQ3">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q3-a">Developers security testing is only feature-driven</label>
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q3-b" name="q3" value="b" [(ngModel)]="selectedQ3">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q3-b">Developers do not test for security</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q3-c" name="q3" value="c" [(ngModel)]="selectedQ3">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q3-c">Security is a priority during developer testing</label>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <!-- Q4 -->
+        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ4Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
+            class="questionFour">
+
+            <div class="row question">
+                <div class="custom-col" style="width: 5%;">
+                    <label>4</label>
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q4">{{q4}}</label>
+                </div>
+            </div>
+
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q4-a" name="q4" value="a" [(ngModel)]="selectedQ4">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q4-a">Yes</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q4-b" name="q4" value="b" [(ngModel)]="selectedQ4">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q4-b">No</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q4-c" name="q4" value="c" [(ngModel)]="selectedQ4">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q4-c">Not sure</label><br />
+                </div>
+            </div>
+        </div>
         <br>
+
+        <!-- Q5 -->
+        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ5Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
+            class="questionFive">
+
+            <div class="row question">
+                <div class="custom-col" style="width: 5%;">
+                    <label>5</label>
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q5">{{q5}}</label>
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q5-a" name="q5" value="a" [(ngModel)]="selectedQ5">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q5-a">Yes</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q5-b" name="q5" value="b" [(ngModel)]="selectedQ5">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q5-b">No</label><br />
+                </div>
+            </div>
+
+            <div class="row my-hoverable-col">
+                <div class="custom-col" style="width: 5%;">
+                    <input type="radio" id="q5-c" name="q5" value="c" [(ngModel)]="selectedQ5">
+                </div>
+                <div class="col-sm-11" style="width: 95%;">
+                    <label for="q5-c">Depends on the context</label>
+                </div>
+            </div>
+            <br />
         </div>
-       
-        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ2Correct ? '#E4FFE1' : '#FFD0D0') : ''}" class="questionTwo">
-        <p>{{q2}}</p>
-
-        <input type="radio" id="q2-a" name="q2" value="a" [(ngModel)]="selectedQ2">
-        <label for="q2-a">During Design and Implementation</label><br />
-
-        <input type="radio" id="q2-b" name="q2" value="b" [(ngModel)]="selectedQ2">
-        <label for="q2-b">In Developer Testing</label><br />
-
-        <input type="radio" id="q2-c" name="q2" value="c" [(ngModel)]="selectedQ2">
-        <label for="q2-c">Through Code Testing and Code Review</label><br />
-
-        <input type="radio" id="q2-d" name="q2" value="d" [(ngModel)]="selectedQ2">
-        <label for="q2-d">In Post-development Testing</label><br />
-
-        <input type="radio" id="q2-e" name="q2" value="e" [(ngModel)]="selectedQ2">
-        <label for="q2-e">All of the Above</label><br />
-
-        <input type="radio" id="q2-f" name="q2" value="f" [(ngModel)]="selectedQ2">
-        <label for="q2-f">None of the Above</label>
-        <br>
-        </div>
-
-        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ3Correct ? '#E4FFE1' : '#FFD0D0') : ''}" class="questionThree">
-        <p>{{q3}}</p>
-
-        <input type="radio" id="q3-a" name="q3" value="a" [(ngModel)]="selectedQ3">
-        <label for="q3-a">Developers security testing is only feature-driven</label><br />
-
-        <input type="radio" id="q3-b" name="q3" value="b" [(ngModel)]="selectedQ3">
-        <label for="q3-b">Developers do not test for security</label><br />
-
-        <input type="radio" id="q3-c" name="q3" value="c" [(ngModel)]="selectedQ3">
-        <label for="q3-c">Security is a priority during developer testing</label>
-        <br>
-        </div>
-
-        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ4Correct ? '#E4FFE1' : '#FFD0D0') : ''}"  class="questionFour">
-        <p>{{q4}}</p>
-
-        <input type="radio" id="q4-yes" name="q4" value="yes" [(ngModel)]="selectedQ4">
-        <label for="q4-yes">Yes</label><br />
-
-        <input type="radio" id="q4-no" name="q4" value="no" [(ngModel)]="selectedQ4">
-        <label for="q4-no">No</label><br />
-
-        <input type="radio" id="q4-unsure" name="q4" value="unsure" [(ngModel)]="selectedQ4">
-        <label for="q4-unsure">Not sure</label><br />
-        <br>
-        </div>
-
-        <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ4Correct ? '#E4FFE1' : '#FFD0D0') : ''}" class="questionFive">
-        <p>{{q5}}</p>
-
-        <input type="radio" id="q5-yes" name="q5" value="yes" [(ngModel)]="selectedQ5">
-        <label for="q5-yes">Yes</label><br />
-
-        <input type="radio" id="q5-no" name="q5" value="no" [(ngModel)]="selectedQ5">
-        <label for="q5-no">No</label><br />
-
-        <input type="radio" id="q5-depends" name="q5" value="depends" [(ngModel)]="selectedQ5">
-        <label for="q5-depends">Depends on the context</label>
-        <br/>
-        </div>
-        <button type="submit" [ngStyle]="{'background-color': !isAllAnswersCorrect ? '#F1EFEF' : '#007bff',
-        'color': !isAllAnswersCorrect ? 'grey' : 'white'
-        }"
-        >Submit</button>
+        <button class="btn btn-primary" type="submit" [class.disabled]="isButtonDisabled">Submit</button>
     </form>
 
-    <div  *ngIf="!isAllAnswersCorrect">
+    <div *ngIf="!isAllAnswersCorrect">
+        <h5>Your Score: {{section1Score}}</h5>
+
         <h5>Guidelines for Incorrect Answers</h5>
-        <ul *ngIf="!isQ1Correct">
-            <li>{{ guideLinesQ1 }}</li>
-        </ul>
-        <ul *ngIf="!isQ2Correct">
-            <li>{{ guideLinesQ2 }}</li>
-        </ul>
-        <ul *ngIf="!isQ3Correct">
-            <li>{{ guideLinesQ3 }}</li>
-        </ul>
-        <ul *ngIf="!isQ4Correct">
-            <li>{{ guideLinesQ4 }}</li>
-        </ul>
-        <ul *ngIf="!isQ5Correct">
-            <li>{{ guideLinesQ5 }}</li>
+        <ul *ngFor="let guideline of section1Guidelines">
+            <li>{{ guideline }}</li>
         </ul>
     </div>
 </div>

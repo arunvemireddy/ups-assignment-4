@@ -1,8 +1,51 @@
-<p>result works!</p>
-
 <div>
-    {{sectionOneScore}}
-    {{sectionTwoScore}}
-    {{sectionThreeScore}}
-    {{finalScore}}
+    <div class="heading">
+        <h4>Final Results</h4>
+    </div>
+    
+    <div class="row">
+        <div class="col-4 firstSection">
+            <div>
+                <h5>Section 1 Score:{{sectionOneScore}}</h5>
+            </div>
+            <div>
+                <ul *ngFor="let guideline of section1Guidelines">
+                    <li>{{ guideline }}</li>
+                  </ul>
+            </div>
+        </div>
+        
+        <div class="col-4 secondSection">
+            <div>
+                <h5>Section 2 Score:{{sectionTwoScore}}</h5>
+            </div>
+            <div>
+                <ul *ngFor="let guideline of section2Guidelines">
+                    <li>{{ guideline }}</li>
+                  </ul>
+            </div>
+        </div>
+        
+        <div class="col-4 thirdSection">
+            <div>
+                <h5>Section 3 Score:{{sectionThreeScore}}</h5>
+            </div>
+            <div>
+                <ul *ngFor="let guideline of section3Guidelines">
+                    <li>{{ guideline }}</li>
+                  </ul>
+            </div>
+        </div>
+     
+    </div>
+    
+    <div class="row finalSection">
+        <div class="col-12">
+            <h5>Final Score:{{finalScore}}</h5>
+        </div>
+    </div>
 </div>
+
+
+
+

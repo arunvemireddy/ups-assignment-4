@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+.heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.heading h4 {
+    font-size: 18px;
+}
+
+.question label {
+    font-size: 18px;
+}
+
+label {
+    width: 100%;
+}
+
+.my-hoverable-col {
+    margin-left: 50px;
+    margin-bottom: 7px;
+}
+
+.my-hoverable-col:hover {
+    background-color: rgb(206, 234, 243);
+    cursor: pointer;
+}
+
+.my-hoverable-col label {
+    font-size: 17px;
+}
+
+.question {
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.btn {
+    float: right;
+   
+}
+
+.nav-item{
+    border: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}

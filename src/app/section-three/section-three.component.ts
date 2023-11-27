@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-section-three',
@@ -11,13 +12,16 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './section-three.component.scss'
 })
 export class SectionThreeComponent {
-  constructor(private router:Router){}
+  constructor(private router:Router,private sharedService:SharedService){}
 
   q1 = `1. Do you think application security is considered one of the developer's responsibilities in SDLC? `;
   q2 = `2. At which stages in the Software Development Life Cycle (SDLC) should security measures be applied?`;
   q3 = `3. Which of the following are True?`;
   q4 = `4. Is it acceptable to consider security as a trade-off between cost and benefit?`;
   q5 = `5. Is it appropriate for developers to address security concerns solely in response to a security incident?`;
+  isButtonDisabled:boolean = false;
+  section3Guidelines:string[] = [];
+  isAllAnswersCorrect:boolean=true;
 
   guideLinesQ1 = "yes";
   guideLinesQ2 = "guideLines Q2";
@@ -31,33 +35,40 @@ export class SectionThreeComponent {
   correctAnsQ4 = 'no';
   correctAnsQ5 = 'no';
 
-  q1Score = 10;
-  q2Score = 10;
-  q3Score = 10;
-  q4Score = 10;
-  q5Score = 10;
+  score = {
+    q1: 10,
+    q2: 10,
+    q3: 10,
+    q4: 10,
+    q5: 10
+  };
+
+  guideLines = {
+    q1: 'yes1',
+    q2: 'yes2',
+    q3: 'yes',
+    q4: 'yes',
+    q5: 'yes5'
+  }
 
   selectedQ1: string = '';
   selectedQ2: string = '';
   selectedQ3: string = '';
   selectedQ4: string = '';
   selectedQ5: string = '';
+  section3Score:number = 0;
 
   isQ1Correct:boolean = true;
   isQ2Correct:boolean = true;
   isQ3Correct:boolean = true;
   isQ4Correct:boolean = true;
   isQ5Correct:boolean = true;
-  isAllAnswersCorrect:boolean=true;
 
   validateForm(event: Event) {
     event.preventDefault();
-
-    console.log('Q1:', this.selectedQ1);
-    console.log('Q2:', this.selectedQ2);
-    console.log('Q3:', this.selectedQ3);
-    console.log('Q4:', this.selectedQ4);
-    console.log('Q5:', this.selectedQ5);
+    this.isButtonDisabled = true;
+    this.sharedService.section3Score = 0;
+    this.sharedService.section3Guidelines = [];
 
     this.isQ1Correct = this.selectedQ1.toLowerCase() === this.correctAnsQ1.toLowerCase();
     this.isQ2Correct = this.selectedQ2.toLowerCase() === this.correctAnsQ2.toLowerCase();
@@ -66,20 +77,37 @@ export class SectionThreeComponent {
     this.isQ5Correct = this.selectedQ5.toLowerCase() === this.correctAnsQ5.toLowerCase();
     this.isAllAnswersCorrect = false;
 
-    if (!this.isQ1Correct) {
-      console.log('Guidelines for Q1:', this.guideLinesQ1);
+    if (this.isQ1Correct) {
+      this.sharedService.section3Score += this.score.q1;
+    }else{
+      this.sharedService.section3Guidelines.push(this.guideLines.q1);
     }
-    if (!this.isQ2Correct) {
-      console.log('Guidelines for Q2:', this.guideLinesQ2);
+
+    if (this.isQ2Correct) {
+      this.sharedService.section3Score += this.score.q2;
+    }else{
+      this.sharedService.section3Guidelines.push(this.guideLines.q2);
     }
-    if (!this.isQ3Correct) {
-      console.log('Guidelines for Q3:', this.guideLinesQ3);
+
+    if (this.isQ3Correct) {
+      this.sharedService.section3Score += this.score.q3;
+    }else{
+      this.sharedService.section3Guidelines.push(this.guideLines.q3);
     }
-    if (!this.isQ4Correct) {
-      console.log('Guidelines for Q4:', this.guideLinesQ4);
+
+    if (this.isQ4Correct) {
+      this.sharedService.section3Score += this.score.q4;
+    }else{
+      this.sharedService.section3Guidelines.push(this.guideLines.q4);
     }
-    if (!this.isQ5Correct) {
-      console.log('Guidelines for Q5:', this.guideLinesQ5);
+
+    if (this.isQ5Correct) {
+      this.sharedService.section3Score += this.score.q5;
+    }else{
+      this.sharedService.section3Guidelines.push(this.guideLines.q5);
     }
+
+    this.section3Guidelines = this.sharedService.section3Guidelines;
+    this.section3Score = this.sharedService.section3Score;
   }
 }

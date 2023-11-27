@@ -16,10 +16,9 @@ import { ResultComponent } from './result/result.component';
 })
 export class AppComponent {
   title = 'UPS-Assignment4';
-  currentSection: string = '';
+  currentSection: string = 'section1';
 
   showSection(section: string) {
-    console.log("show section");
     this.currentSection = section;
   }
 }
