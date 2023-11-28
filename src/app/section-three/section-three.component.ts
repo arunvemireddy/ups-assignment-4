@@ -14,41 +14,39 @@ import { SharedService } from '../shared.service';
 export class SectionThreeComponent {
   constructor(private router: Router, private sharedService: SharedService) { }
 
-  q1 = `1. Do you think application security is considered one of the developer's responsibilities in SDLC? `;
-  q2 = `2. At which stages in the Software Development Life Cycle (SDLC) should security measures be applied?`;
-  q3 = `3. Which of the following are True?`;
-  q4 = `4. Is it acceptable to consider security as a trade-off between cost and benefit?`;
-  q5 = `5. Is it appropriate for developers to address security concerns solely in response to a security incident?`;
+  correctAnsQ1 = 'a';
+  correctAnsQ2 = 'b';
+  correctAnsQ3 = 'c';
+
+
+  q1 = `Is it advisable to use a self-signed OpenSSL certificate for a public website`;
+  q2 = `Is it considered acceptable for developers to use deprecated functions in their code`;
+  q3 = `What developers should do when obtaining code solutions from community platforms for implementing cryptographic APIs such as Stack Overflow`;
+
+
   isButtonDisabled: boolean = false;
   section3Guidelines: string[] = [];
   isAllAnswersCorrect: boolean = true;
-
-  guideLinesQ1 = "yes";
-  guideLinesQ2 = "guideLines Q2";
-  guideLinesQ3 = "guideLines Q3";
-  guideLinesQ4 = "guideLines Q4";
-  guideLinesQ5 = "guideLines Q5";
-
-  correctAnsQ1 = 'yes';
-  correctAnsQ2 = 'e';
-  correctAnsQ3 = 'c';
-  correctAnsQ4 = 'no';
-  correctAnsQ5 = 'no';
 
   score = {
     q1: 10,
     q2: 10,
     q3: 10,
-    q4: 10,
-    q5: 10
+   
   };
 
   guideLines = {
-    q1: 'yes1',
-    q2: 'yes2',
-    q3: 'yes',
-    q4: 'yes',
-    q5: 'yes5'
+    q1: `Correct Answer: A \t it's possible to use a self-signed OpenSSL certificate, it's essential to be aware that web browsers do not automatically trust self-signed certificates. 
+    This may result in warning messages for users visiting the website. To ensure a smoother user experience and establish trust, especially for public-facing websites, 
+    it's advisable to obtain a certificate from a trusted certificate authority. 
+    This helps prevent potential security concerns and ensures that users can access your website without encountering browser warnings. `,
+
+    q2: `Correct Answer: B \t Deprecated functions may be outdated and could contain security vulnerabilities that have been identified and addressed in newer alternatives. 
+    Using deprecated functions may expose your code to potential security risks`,
+
+    q3: `Correct Answer: C \t Thoroughly analyzing code solutions obtained from community platforms is crucial to ensure the security and integrity of your project. 
+    While community platforms like Stack Overflow can be valuable for getting insights, blindly trusting code without verification may introduce security vulnerabilities. 
+    Cryptographic implementations demand precision, and overlooking potential vulnerabilities even they are provided by experienced developers could lead to serious security risks.`
   };
 
   result = {
@@ -82,8 +80,7 @@ export class SectionThreeComponent {
     this.isQ1Correct = this.selectedQ1.toLowerCase() === this.correctAnsQ1.toLowerCase();
     this.isQ2Correct = this.selectedQ2.toLowerCase() === this.correctAnsQ2.toLowerCase();
     this.isQ3Correct = this.selectedQ3.toLowerCase() === this.correctAnsQ3.toLowerCase();
-    this.isQ4Correct = this.selectedQ4.toLowerCase() === this.correctAnsQ4.toLowerCase();
-    this.isQ5Correct = this.selectedQ5.toLowerCase() === this.correctAnsQ5.toLowerCase();
+
 
     if (this.isQ1Correct) {
       this.sharedService.section3Score += this.score.q1;
@@ -106,19 +103,7 @@ export class SectionThreeComponent {
       this.sharedService.section3Guidelines.push(this.guideLines.q3);
     }
 
-    if (this.isQ4Correct) {
-      this.sharedService.section3Score += this.score.q4;
-      this.result.q4 = this.score.q4;
-    } else {
-      this.sharedService.section3Guidelines.push(this.guideLines.q4);
-    }
-
-    if (this.isQ5Correct) {
-      this.sharedService.section3Score += this.score.q5;
-      this.result.q5 = this.score.q5;
-    } else {
-      this.sharedService.section3Guidelines.push(this.guideLines.q5);
-    }
+    
 
     this.section3Guidelines = this.sharedService.section3Guidelines;
     this.section3Score = this.sharedService.section3Score;

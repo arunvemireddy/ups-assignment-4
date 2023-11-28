@@ -13,7 +13,10 @@
         [style.background-color]="currentSection === 'section3' ? '#CCD8DF' : '#EBEBEB'">Section 3</button>
 
       <button class="nav-item" (click)="showSection('section4')"
-        [style.background-color]="currentSection === 'section4' ? '#CCD8DF' : '#EBEBEB'">Results</button>
+        [style.background-color]="currentSection === 'section4' ? '#CCD8DF' : '#EBEBEB'">Section 4</button>
+
+      <button class="nav-item" (click)="showSection('result')"
+        [style.background-color]="currentSection === 'result' ? '#CCD8DF' : '#EBEBEB'">Results</button>
     </div>
 
     <!-- Content -->
@@ -36,12 +39,15 @@
         </div>
       </app-section-three>
 
-      <app-result *ngIf="currentSection === 'section4'">
+      <app-section-four *ngIf="currentSection === 'section4'">
         <div>
-          <button class="btn btn-primary" type="button" (click)="showSection('section4')">Next</button>
+          <button class="btn btn-primary" type="button" (click)="showSection('result')">Next</button>
         </div>
-      </app-result>
-    </div>
+      </app-section-four>
 
+      <app-result *ngIf="currentSection === 'result'">
+      </app-result>
+
+    </div>
   </div>
 </div>

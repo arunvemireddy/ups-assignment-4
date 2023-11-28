@@ -1,15 +1,11 @@
 <div class="heading">
-    <h4>Section 2 - Security Questions for Software Developers</h4>
+    <h4>Section 4 - Security Questions for Software Developers</h4>
 </div>
-
-
 <div>
     <form (submit)="validateForm($event)">
-
         <!-- Q1 -->
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ1Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
             class="questionOne">
-
             <div class="row question">
                 <div class="custom-col" style="width: 5%;">
                     <label>1</label>
@@ -21,49 +17,27 @@
                     <label>{{result.q1}}/{{score.q1}}</label>
                 </div>
             </div>
-            <br />
 
             <div class="row my-hoverable-col">
                 <div class="custom-col" style="width: 5%;">
-                    <input type="radio" id="q1-solely" name="q1" value="a" [(ngModel)]="selectedQ1">
+                    <input type="radio" id="q1-a" name="q1" value="a" [(ngModel)]="selectedQ1">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-solely">A) Solely focus on the functionality of the program and assume security concerns
-                        will be addressed by dedicated security teams during testing.</label>
+                    <label for="q1-a">A) Yes, solely on individual developers.</label><br />
                 </div>
             </div>
 
             <div class="row my-hoverable-col">
                 <div class="custom-col" style="width: 5%;">
-                    <input type="radio" id="q1-prior" name="q1" value="b" [(ngModel)]="selectedQ1">
+                    <input type="radio" id="q1-b" name="q1" value="b" [(ngModel)]="selectedQ1">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-prior">B) Prioritize functionality but be aware of potential security issues, leaving it
-                        to testing and security teams to handle.</label><br />
-                </div>
-            </div>
-
-            <div class="row my-hoverable-col">
-                <div class="custom-col" style="width: 5%;">
-                    <input type="radio" id="q1-active" name="q1" value="c" [(ngModel)]="selectedQ1">
-                </div>
-                <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-active">C) Actively address and mitigate security concerns, including using safer
-                        alternatives to functions like strcpy, as part of the development process. </label><br />
-                </div>
-            </div>
-
-            <div class="row my-hoverable-col">
-                <div class="custom-col" style="width: 5%;">
-                    <input type="radio" id="q1-only" name="q1" value="d" [(ngModel)]="selectedQ1">
-                </div>
-                <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-only">D) Only address security concerns if explicitly instructed by security teams
-                        or if security is a primary requirement for the specific project. </label><br />
+                    <label for="q1-b">B) No, Company hierarchies play a role.</label><br />
                 </div>
             </div>
         </div>
         <br />
+
 
         <!-- Q2 -->
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ2Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
@@ -80,15 +54,14 @@
                     <label>{{result.q2}}/{{score.q2}}</label>
                 </div>
             </div>
-            <br />
 
             <div class="row my-hoverable-col">
                 <div class="custom-col" style="width: 5%;">
                     <input type="radio" id="q2-a" name="q2" value="a" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-a">A) Full Trust: Developers assume widely-used library APIs are inherently secure.
-                    </label>
+                    <label for="q2-a">A) Developers always prioritize security, irrespective of company culture.
+                    </label><br />
                 </div>
             </div>
 
@@ -97,8 +70,8 @@
                     <input type="radio" id="q2-b" name="q2" value="b" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-b">B) Trust with Awareness: Developers generally trust library APIs but are mindful of
-                        potential security issues. </label>
+                    <label for="q2-b">B) Developers follow security practices if mandated by company policies and
+                        culture.</label><br />
                 </div>
             </div>
 
@@ -107,9 +80,7 @@
                     <input type="radio" id="q2-c" name="q2" value="c" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-c">C) Neutral Stance: Developers approach library APIs without a specific bias,
-                        considering both
-                        functionality and security equally. </label>
+                    <label for="q2-c">C) Developers ignore security regardless of company culture. </label><br />
                 </div>
             </div>
 
@@ -118,18 +89,7 @@
                     <input type="radio" id="q2-d" name="q2" value="d" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-d">D) Skeptical Trust: Developers are wary of the security of library APIs and actively
-                        assess their implications. </label><br />
-                </div>
-            </div>
-
-            <div class="row my-hoverable-col">
-                <div class="custom-col" style="width: 5%;">
-                    <input type="radio" id="q2-e" name="q2" value="e" [(ngModel)]="selectedQ2">
-                </div>
-                <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-e">E) No Trust: Developers never assume that library APIs are secure; they rigorously
-                        assess and validate security aspects before integration. </label><br />
+                    <label for="q2-d">D) Developers view security as a task only for those with time.</label><br />
                 </div>
             </div>
         </div>
@@ -150,15 +110,13 @@
                     <label>{{result.q3}}/{{score.q3}}</label>
                 </div>
             </div>
-            <br />
 
             <div class="row my-hoverable-col">
                 <div class="custom-col" style="width: 5%;">
                     <input type="radio" id="q3-a" name="q3" value="a" [(ngModel)]="selectedQ3">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q3-a">A) Once a system is functional, updates should be avoided to prevent potential
-                        disruptions, even if there are known vulnerabilities in older functions and APIs. </label>
+                    <label for="q3-a">A) External pressure has no impact on teams' security practices. </label>
                 </div>
             </div>
 
@@ -167,8 +125,7 @@
                     <input type="radio" id="q3-b" name="q3" value="b" [(ngModel)]="selectedQ3">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q3-b">B) Developers should prioritize stability and consider updates when necessary, 
-                        giving weight to potential vulnerabilities and the need for stability</label>
+                    <label for="q3-b">B) External mandates drive teams to adopt security practices.</label><br />
                 </div>
             </div>
 
@@ -177,17 +134,27 @@
                     <input type="radio" id="q3-c" name="q3" value="c" [(ngModel)]="selectedQ3">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q3-c">C) Developers should always prioritize security over stability; they should regularly
-                        update code, libraries, and use the latest functions to address known vulnerabilities and
-                        enhance the overall security posture.</label>
+                    <label for="q3-c">C) Teams resist external pressure and maintain their existing practices</label>
                 </div>
+
             </div>
-        </div>
-        <br />
+
+                <div class="row my-hoverable-col">
+                    <div class="custom-col" style="width: 5%;">
+                        <input type="radio" id="q3-d" name="q3" value="d" [(ngModel)]="selectedQ3">
+                    </div>
+                    <div class="col-sm-11" style="width: 95%;">
+                        <label for="q3-d">D) Teams only adopt security practices if they align with internal
+                            policies</label>
+                    </div>
+                </div>
+
+            </div>
+        <br>
 
         <!-- Q4 -->
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ4Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
-            class="questionThree">
+            class="questionFour">
 
             <div class="row question">
                 <div class="custom-col" style="width: 5%;">
@@ -200,14 +167,14 @@
                     <label>{{result.q4}}/{{score.q4}}</label>
                 </div>
             </div>
-            <br />
+
 
             <div class="row my-hoverable-col">
                 <div class="custom-col" style="width: 5%;">
                     <input type="radio" id="q4-a" name="q4" value="a" [(ngModel)]="selectedQ4">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q4-a">A) It makes the code longer </label>
+                    <label for="q4-a">A) Yes, developers should be vigilant about when using this function</label><br />
                 </div>
             </div>
 
@@ -216,35 +183,16 @@
                     <input type="radio" id="q4-b" name="q4" value="b" [(ngModel)]="selectedQ4">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q4-b">B) It prevents security vulnerabilities like injection attacks.</label>
+                    <label for="q4-b">B) No, as long as the function does its job, developers don't need to worry as it
+                        provided in the official documentation </label><br />
                 </div>
             </div>
-
-            <div class="row my-hoverable-col">
-                <div class="custom-col" style="width: 5%;">
-                    <input type="radio" id="q4-c" name="q4" value="c" [(ngModel)]="selectedQ4">
-                </div>
-                <div class="col-sm-11" style="width: 95%;">
-                    <label for="q4-c">C) It is a requirement imposed by programming languages. </label>
-                </div>
-            </div>
-
-            <div class="row my-hoverable-col">
-                <div class="custom-col" style="width: 5%;">
-                    <input type="radio" id="q4-d" name="q4" value="d" [(ngModel)]="selectedQ4">
-                </div>
-                <div class="col-sm-11" style="width: 95%;">
-                    <label for="q4-d">D) It only matters in front-end development. </label>
-                </div>
-            </div>
-
         </div>
-        <br />
-
+        <br>
 
         <!-- Q5 -->
         <div [ngStyle]="{'background-color': !isAllAnswersCorrect ? (isQ5Correct ? '#E4FFE1' : '#FFD0D0') : ''}"
-            class="questionThree">
+            class="questionFive">
 
             <div class="row question">
                 <div class="custom-col" style="width: 5%;">
@@ -257,14 +205,13 @@
                     <label>{{result.q5}}/{{score.q5}}</label>
                 </div>
             </div>
-            <br/>
 
             <div class="row my-hoverable-col">
                 <div class="custom-col" style="width: 5%;">
                     <input type="radio" id="q5-a" name="q5" value="a" [(ngModel)]="selectedQ5">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q5-a">A) Simple designs are more visually appealing  </label>
+                    <label for="q5-a">A) A secure area in the API that developers often overlook.</label><br />
                 </div>
             </div>
 
@@ -273,7 +220,8 @@
                     <input type="radio" id="q5-b" name="q5" value="b" [(ngModel)]="selectedQ5">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q5-b">B) Simple designs reduce the likelihood of implementation errors </label>
+                    <label for="q5-b">B) A misconception, misunderstanding, or oversight by developers when using an API
+                        function.</label><br />
                 </div>
             </div>
 
@@ -282,29 +230,30 @@
                     <input type="radio" id="q5-c" name="q5" value="c" [(ngModel)]="selectedQ5">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q5-c">C) Simple designs speed up the development process </label>
+                    <label for="q5-c">C) An extra layer of security implemented by developers for API functions.
+                    </label>
                 </div>
             </div>
 
             <div class="row my-hoverable-col">
                 <div class="custom-col" style="width: 5%;">
-                    <input type="radio" id="q5-d" name="q5" value="d" [(ngModel)]="selectedQ5">
+                    <input type="radio" id="q5-c" name="q5" value="c" [(ngModel)]="selectedQ5">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q5-d">D) Simple designs are easier to market  </label>
+                    <label for="q5-c">D) A security vulnerability intentionally introduced into the API </label>
                 </div>
             </div>
-
         </div>
         <br />
 
-        <button type="submit" class="btn btn-primary" [class.disabled]="isButtonDisabled">Submit</button>
+        <button class="btn btn-primary" type="submit" [class.disabled]="isButtonDisabled">Submit</button>
     </form>
 
     <div *ngIf="!isAllAnswersCorrect">
-        <h5>Your Score: {{section2Score}}</h5>
+        <h5>Your Score: {{section1Score}}</h5>
+
         <h5>Guidelines for Incorrect Answers</h5>
-        <div *ngFor="let guideline of section2Guidelines">
+        <div *ngFor="let guideline of section1Guidelines">
             <div class="guideDiv">
                 <strong>{{ guideline.split('\t')[0] }}</strong>
                 <br />
@@ -313,7 +262,6 @@
         </div>
     </div>
 </div>
-
 
 <div>
     <ng-content *ngIf="!isAllAnswersCorrect"></ng-content>

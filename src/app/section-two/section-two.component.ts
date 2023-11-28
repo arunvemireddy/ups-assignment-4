@@ -23,8 +23,8 @@ export class SectionTwoComponent {
   Consider the strcpy function in the C programming language, which is known for its potential to cause buffer overflows. As a software developer, should you`;
   q2 = `To what extent do developers trust the security of library APIs during development?`;
   q3 = `In software development, some developers hesitate to update code or migrate to newer libraries, fearing potential disruptions to existing functionality. It's important to consider that`;
-  q4 = `4. Is it acceptable to consider security as a trade-off between cost and benefit?`;
-  q5 = `5. Is it appropriate for developers to address security concerns solely in response to a security incident?`;
+  q4 = `Why is input validation important in software development`;
+  q5 = `According to the best practices, why is it recommended to aim for simple designs in terms of security`;
 
   correctAnsQ1 = 'c';
   correctAnsQ2 = 'e';

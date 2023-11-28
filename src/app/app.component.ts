@@ -6,11 +6,12 @@ import { SectionTwoComponent } from './section-two/section-two.component';
 import { SectionThreeComponent } from './section-three/section-three.component';
 import { SectionOneComponent } from './section-one/section-one.component';
 import { ResultComponent } from './result/result.component';
+import { SectionFourComponent } from './section-four/section-four.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, SectionOneComponent, SectionTwoComponent, SectionThreeComponent, ResultComponent],
+  imports: [CommonModule, RouterOutlet, SectionOneComponent, SectionTwoComponent, SectionThreeComponent, SectionFourComponent,ResultComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
