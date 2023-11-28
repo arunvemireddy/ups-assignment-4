@@ -54,12 +54,13 @@ export class SectionFourComponent {
     Acknowledging broader perspective allows for the implementation of new, realistic best practices that can address the complexities and pressures of 
     development without solely blaming individual developers.`,
 
-    q2: `2. Correct Answer: B \t While all stages of the Software Development Life Cycle (SDLC) are important for application security, it's crucial to recognize that security measures should be applied throughout the entire process. 
-          This includes during design and implementation, in developer testing, through code testing and code review, as well as in post-development testing. 
-          Ensuring security across all stages helps create a robust and resilient application. `,
+    q2: `2. Correct Answer: B \t It's essential for developers to recognize that company culture significantly influences the approach to security. 
+    While it's ideal for developers to prioritize security independently, the correct understanding is that security practices should be aligned with and 
+    reinforced by company policies and culture.  `,
 
-    q3: `3. Correct Answer: B \t Developers may prioritize feature-driven testing, it's essential to recognize that security is also a priority during developer testing. 
-          Developers play a crucial role in incorporating security measures during the testing phase to identify and address potential vulnerabilities.`,
+    q3: `3. Correct Answer: B \t It's crucial for developers to understand that external pressure, especially mandates from overseeing entities,
+     plays a significant role in driving teams to adopt security practices. 
+    This external guidance is often essential for ensuring that teams adhere to industry standards and best practices.`,
 
     q4: `4. Correct Answer: A \t SQL injection is a significant threat that can lead to unauthorized access and data manipulation. 
     Format string injection attacks can be a concern, especially when dealing with dynamic command execution. 
