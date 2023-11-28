@@ -23,7 +23,7 @@ export class SectionFourComponent {
 
   isButtonDisabled: boolean = false;
   isAllAnswersCorrect: boolean = true;
-  section1Guidelines: string[] = [];
+  section4Guidelines: string[] = [];
 
   correctAnswers = {
     q1: 'b',
@@ -34,11 +34,11 @@ export class SectionFourComponent {
   };
 
   score = {
-    q1: 10,
-    q2: 10,
-    q3: 10,
-    q4: 10,
-    q5: 10
+    q1: 2,
+    q2: 5,
+    q3: 4,
+    q4: 5,
+    q5: 4
   };
 
   result = {
@@ -75,7 +75,7 @@ export class SectionFourComponent {
   selectedQ3: string = '';
   selectedQ4: string = '';
   selectedQ5: string = '';
-  section1Score: number = 0;
+  section4Score: number = 0;
 
   isQ1Correct: boolean = true;
   isQ2Correct: boolean = true;
@@ -87,8 +87,8 @@ export class SectionFourComponent {
     event.preventDefault();
     this.isButtonDisabled = true;
     this.isAllAnswersCorrect = false;
-    this.sharedService.section1Score = 0;
-    this.sharedService.section1Guidelines = [];
+    this.sharedService.section4Score = 0;
+    this.sharedService.section4Guidelines = [];
 
     this.isQ1Correct = this.selectedQ1.toLowerCase() === this.correctAnswers.q1.toLowerCase();
     this.isQ2Correct = this.selectedQ2.toLowerCase() === this.correctAnswers.q2.toLowerCase();
@@ -97,41 +97,41 @@ export class SectionFourComponent {
     this.isQ5Correct = this.selectedQ5.toLowerCase() === this.correctAnswers.q5.toLowerCase();
 
     if (this.isQ1Correct) {
-      this.sharedService.section1Score += this.score.q1;
+      this.sharedService.section4Score += this.score.q1;
       this.result.q1 = this.score.q1;
     } else {
-      this.sharedService.section1Guidelines.push(this.guideLines.q1);
+      this.sharedService.section4Guidelines.push(this.guideLines.q1);
     }
 
     if (this.isQ2Correct) {
-      this.sharedService.section1Score += this.score.q2;
+      this.sharedService.section4Score += this.score.q2;
       this.result.q2 = this.score.q2;
     } else {
-      this.sharedService.section1Guidelines.push(this.guideLines.q2);
+      this.sharedService.section4Guidelines.push(this.guideLines.q2);
     }
 
     if (this.isQ3Correct) {
-      this.sharedService.section1Score += this.score.q3;
+      this.sharedService.section4Score += this.score.q3;
       this.result.q3 = this.score.q3;
     } else {
-      this.sharedService.section1Guidelines.push(this.guideLines.q3);
+      this.sharedService.section4Guidelines.push(this.guideLines.q3);
     }
 
     if (this.isQ4Correct) {
-      this.sharedService.section1Score += this.score.q4;
+      this.sharedService.section4Score += this.score.q4;
       this.result.q4 = this.score.q4;
     } else {
-      this.sharedService.section1Guidelines.push(this.guideLines.q4);
+      this.sharedService.section4Guidelines.push(this.guideLines.q4);
     }
 
     if (this.isQ5Correct) {
-      this.sharedService.section1Score += this.score.q5;
+      this.sharedService.section4Score += this.score.q5;
       this.result.q5 = this.score.q5;
     } else {
-      this.sharedService.section1Guidelines.push(this.guideLines.q5);
+      this.sharedService.section4Guidelines.push(this.guideLines.q5);
     }
 
-    this.section1Guidelines = this.sharedService.section1Guidelines;
-    this.section1Score = this.sharedService.section1Score;
+    this.section4Guidelines = this.sharedService.section4Guidelines;
+    this.section4Score = this.sharedService.section4Score;
   }
 }

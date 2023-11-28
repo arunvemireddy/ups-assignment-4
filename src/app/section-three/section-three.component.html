@@ -23,7 +23,8 @@
                     <input type="radio" id="q1-a" name="q1" value="a" [(ngModel)]="selectedQ1">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q1-a">A) No, self-signed certificates may lead to user warnings as they are not automatically trusted by web browsers</label><br />
+                    <label for="q1-a">A) No, self-signed certificates may lead to user warnings as they are not
+                        automatically trusted by web browsers</label><br />
                 </div>
             </div>
 
@@ -60,7 +61,7 @@
                     <input type="radio" id="q2-a" name="q2" value="a" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-a">B) Yes, deprecated functions are always safe to use. </label><br />
+                    <label for="q2-a">A) Yes, deprecated functions are always safe to use. </label><br />
                 </div>
             </div>
 
@@ -69,7 +70,8 @@
                     <input type="radio" id="q2-b" name="q2" value="b" [(ngModel)]="selectedQ2">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q2-b">C) No, developers should avoid using deprecated functions due to potential risks, such as security vulnerabilities.</label><br />
+                    <label for="q2-b">B) No, developers should avoid using deprecated functions due to potential risks,
+                        such as security vulnerabilities.</label><br />
                 </div>
             </div>
         </div>
@@ -105,7 +107,8 @@
                     <input type="radio" id="q3-b" name="q3" value="b" [(ngModel)]="selectedQ3">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q3-b">B) Consider seeking guidance from experienced developers on community platforms. </label><br />
+                    <label for="q3-b">B) Consider seeking guidance from experienced developers on community platforms.
+                    </label><br />
                 </div>
             </div>
 
@@ -114,7 +117,8 @@
                     <input type="radio" id="q3-c" name="q3" value="c" [(ngModel)]="selectedQ3">
                 </div>
                 <div class="col-sm-11" style="width: 95%;">
-                    <label for="q3-c">C) Thoroughly analyze code solutions for potential security vulnerabilities.</label>
+                    <label for="q3-c">C) Thoroughly analyze code solutions for potential security
+                        vulnerabilities.</label>
                 </div>
             </div>
         </div>
@@ -134,6 +138,6 @@
             </div>
         </div>
     </div>
-<div>
-    <ng-content *ngIf="!isAllAnswersCorrect"></ng-content>
-</div>
+    <div>
+        <ng-content *ngIf="!isAllAnswersCorrect"></ng-content>
+    </div>

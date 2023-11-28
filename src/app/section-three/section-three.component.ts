@@ -29,9 +29,9 @@ export class SectionThreeComponent {
   isAllAnswersCorrect: boolean = true;
 
   score = {
-    q1: 10,
-    q2: 10,
-    q3: 10,
+    q1: 3,
+    q2: 3,
+    q3: 4,
    
   };
 

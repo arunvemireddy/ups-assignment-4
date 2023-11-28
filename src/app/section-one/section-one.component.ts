@@ -34,11 +34,11 @@ export class SectionOneComponent {
   };
 
   score = {
-    q1: 10,
-    q2: 10,
-    q3: 10,
-    q4: 10,
-    q5: 10
+    q1: 3,
+    q2: 4,
+    q3: 1,
+    q4: 1,
+    q5: 1
   };
 
   result = {
@@ -50,21 +50,22 @@ export class SectionOneComponent {
   };
 
   guideLines = {
-    q1: `1. Correct Answer: Yes \t Application security is a critical aspect of the Software Development Life Cycle (SDLC). 
+    q1: `1. Correct Answer: A \t Application security is a critical aspect of the Software Development Life Cycle (SDLC). 
           Developers play a crucial role in ensuring that applications are built with security in mind to protect against potential vulnerabilities and cyber threats. 
           It's important to consider security practices throughout the development process to create robust and secure software`,
 
-    q2: `2. Correct Answer: All the above \t While all stages of the Software Development Life Cycle (SDLC) are important for application security, it's crucial to recognize that security measures should be applied throughout the entire process. 
+    q2: `2. Correct Answer: E \t While all stages of the Software Development Life Cycle (SDLC) are important for application security, it's crucial to recognize that security measures should be applied throughout the entire process. 
           This includes during design and implementation, in developer testing, through code testing and code review, as well as in post-development testing. 
           Ensuring security across all stages helps create a robust and resilient application. `,
 
-    q3: `3. Correct Answer: Security is a priority during developer testing \t Developers may prioritize feature-driven testing, it's essential to recognize that security is also a priority during developer testing. 
+    q3: `3. Correct Answer: C \t Developers may prioritize feature-driven testing, it's essential to recognize that security is also a priority during developer testing. 
           Developers play a crucial role in incorporating security measures during the testing phase to identify and address potential vulnerabilities.`,
 
-    q4: `4. Correct Answer: No \t While cost considerations are important, compromising on security can have serious consequences. 
+    q4: `4. Correct Answer: B \t While cost considerations are important, compromising on security can have serious consequences. 
           It's recommended not to view security as a trade-off but rather as an integral aspect that should not be compromised. 
           Prioritizing security measures is crucial for the long-term stability and resilience of the software.`,
-    q5: `5. Correct Answer: No \t Responding to security incidents is crucial, 
+
+    q5: `5. Correct Answer: B \t Responding to security incidents is crucial, 
         its equally important for developers to be proactive in addressing security concerns before they escalate into a breach. 
         Adopting a proactive approach helps prevent security incidents and enhances the overall security posture of the software.`
   }

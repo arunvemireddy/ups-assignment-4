@@ -250,10 +250,10 @@
     </form>
 
     <div *ngIf="!isAllAnswersCorrect">
-        <h5>Your Score: {{section1Score}}</h5>
+        <h5>Your Score: {{section4Score}}</h5>
 
         <h5>Guidelines for Incorrect Answers</h5>
-        <div *ngFor="let guideline of section1Guidelines">
+        <div *ngFor="let guideline of section4Guidelines">
             <div class="guideDiv">
                 <strong>{{ guideline.split('\t')[0] }}</strong>
                 <br />

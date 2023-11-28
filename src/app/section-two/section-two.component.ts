@@ -20,7 +20,7 @@ export class SectionTwoComponent {
   section2Guidelines: string[] = [];
 
   q1 = `When developing software, security vulnerabilities such as buffer overflow and memory leaks can pose significant risks. 
-  Consider the strcpy function in the C programming language, which is known for its potential to cause buffer overflows. As a software developer, should you`;
+  Consider the "strcpy" function in the C programming language, which is known for its potential to cause buffer overflows. As a software developer, should you`;
   q2 = `To what extent do developers trust the security of library APIs during development?`;
   q3 = `In software development, some developers hesitate to update code or migrate to newer libraries, fearing potential disruptions to existing functionality. It's important to consider that`;
   q4 = `Why is input validation important in software development`;
@@ -29,15 +29,15 @@ export class SectionTwoComponent {
   correctAnsQ1 = 'c';
   correctAnsQ2 = 'e';
   correctAnsQ3 = 'b';
-  correctAnsQ4 = 'no';
-  correctAnsQ5 = 'no';
+  correctAnsQ4 = 'a';
+  correctAnsQ5 = 'b';
 
   score = {
-    q1: 10,
-    q2: 10,
-    q3: 10,
-    q4: 10,
-    q5: 10,
+    q1: 5,
+    q2: 3,
+    q3: 5,
+    q4: 3,
+    q5: 4,
   };
 
   result = {
@@ -62,8 +62,11 @@ export class SectionTwoComponent {
     Prioritizing stability should go hand in hand with considering updates, especially those addressing known vulnerabilities. 
     Balancing these factors ensures your software remains stable while also being resilient against potential security threats.`,
 
-    q4: 'yes',
-    q5: 'yes5'
+    q4: `Correct Answer: A \t When user inputs are not properly validated, attackers can exploit vulnerabilities by injecting malicious code or unexpected input. 
+    This can lead to serious security breaches, such as SQL injection or cross-site scripting (XSS). `,
+
+    q5: `Correct Answer: B \t Aiming for simple designs is recommended because the likelihood of implementation errors increases with design complexity. 
+    Simple designs are easier to understand, implement, and maintain, reducing the chances of introducing security vulnerabilities due to errors or oversights.`
   }
 
   selectedQ1: string = '';
@@ -117,14 +120,14 @@ export class SectionTwoComponent {
       this.sharedService.section2Score += this.score.q4;
       this.result.q4 = this.score.q4;
     } else {
-      // this.sharedService.section2Guidelines.push(this.guideLines.q4);
+      this.sharedService.section2Guidelines.push(this.guideLines.q4);
     }
 
     if (this.isQ5Correct) {
       this.sharedService.section2Score += this.score.q5;
       this.result.q5 = this.score.q5;
     } else {
-      // this.sharedService.section2Guidelines.push(this.guideLines.q5);
+      this.sharedService.section2Guidelines.push(this.guideLines.q5);
     }
 
     this.section2Score = this.sharedService.section2Score;
