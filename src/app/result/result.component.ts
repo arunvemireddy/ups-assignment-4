@@ -19,7 +19,7 @@ export class ResultComponent {
   sectionThreeScore:number=0;
   sectionFourScore:number=0;
   finalScore:number=0;
-  comments:string = "";
+  // comments:string ="";
 
   section1Guidelines:string[] = [];
   section2Guidelines:string[] = [];
@@ -40,16 +40,16 @@ export class ResultComponent {
   
     this.finalScore = this.sectionOneScore+this.sectionTwoScore+this.sectionThreeScore+this.sectionFourScore;
 
-    if(this.finalScore == 0){
-      this.comments = "Please go through the guidelines, and retake the test";
-    }else if(this.finalScore == 60){
-      this.comments = "Great work! Your expertise in software security is commendable."
-    }else if(this.finalScore == 30){
-      this.comments = "Good effort, but there's room for improvement. Consider retaking the test."
-    }else if(this.finalScore>0 && this.finalScore<30){
-      this.comments = "Your score indicates some areas of concern. Focus on key concepts and retake the test.";
-    }else if(this.finalScore>30 && this.finalScore<60){
-      this.comments = "You're on the right track, but there's still room for improvement. Keep studying and consider a retake.";
-    }
+    // if(this.finalScore == 0){
+    //   this.comments = "Please go through the guidelines, and retake the test";
+    // }else if(this.finalScore == 60){
+    //   this.comments = "Great work! Your expertise in software security is commendable."
+    // }else if(this.finalScore == 30){
+    //   this.comments = "Good effort, but there's room for improvement. Consider retaking the test."
+    // }else if(this.finalScore>0 && this.finalScore<30){
+    //   this.comments = "Your score indicates some areas of concern. Focus on key concepts and retake the test.";
+    // }else if(this.finalScore>30 && this.finalScore<60){
+    //   this.comments = "You're on the right track, but there's still room for improvement. Keep studying and consider a retake.";
+    // }
   }
 }
